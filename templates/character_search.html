@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   Character info form
+{% endblock %}
+
+{% block content %}
+    <h4>Character info search by id number</h4>
+    <form action="/search" method="POST">
+        <!-- Choose a category:
+        <select name="category">
+            <option value="people">People</option>
+            <option value="planets">Planets</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="spaceships">Spaceships</option>
+            <option value="films">Films</option>
+            <option value="species">Species</option> -->
+        </select><br>
+        Enter an id number:
+        <input type="number" name="id_number"><br>
+        <input type="submit" value="Search!">
+    </form>
+
+<!-- TODO: Only show this section if there is a character to show -->
+{% if character %}
+<section id="form_results">
+    <p>
+        Character Info:
+    </p>
+    name: {{character.name}}<br>
+    height: {{character.height}} cm<br>
+    mass: {{character.mass}} kg<br>
+    hair color: {{character.hair_color}}<br>
+    eye color: {{character.eye_color}}
+    </p>
+    
+</section>
+{% endif %}
+{% endblock %}
+
+
+

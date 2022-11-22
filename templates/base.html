@@ -1,0 +1,26 @@
+<! -- filename = templates/base.html -- >
+<! -- a standard HTML boilerplate with two template % blocks % -- >
+<!DOCTYPE html>
+<html>
+   <head>
+       <title>
+           {% block title %}{% endblock %}
+       </title>
+   </head>
+   <body>
+       <header>
+           <h1>SWAPI Star Wars Character Search</h1>
+       </header>
+
+       <main>
+           {% block content %} PLACEHOLDER TEXT {% endblock %}
+       </main>
+
+       <!-- <footer>
+           <br />
+           <a href="http://127.0.0.1:5000/search">Click here to search</a>
+       </footer> -->
+   </body>
+</html>
+
+
